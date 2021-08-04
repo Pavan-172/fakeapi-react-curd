@@ -1,5 +1,7 @@
 import React, { useReducer, useState } from "react";
 import axios from "axios";
+import "./style.css";
+import {} from 'react-bootstrap'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -87,7 +89,7 @@ export default function Posts() {
 
   return (
     <>
-      <h1 >List of Posts</h1>
+      <h1>List of Posts</h1>
     
       <button style={{margin:"10px"}} onClick={() => getPosts()}>Get Posts</button>
 
@@ -115,13 +117,29 @@ export default function Posts() {
       <button style={{margin:"10px"}} onClick={createPosts}>
         {formData.id ? "Update Post" : "Create New Post"}
       </button>
+      <section id="what-we-do ">
+          <div class="container-fluid">
+            <h2 class="section-title mb-2 h1">Post-Content</h2>
+            <p class="text-center text-muted h5">fetched details from api</p>
+
       {posts.map(post => (
-        <p  style={{margin:"10px",alignText:"center"}} key={post.id}><span>
-          {post.id}. {post.title} {' --     '} {post.body}</span>
-          <button style={{margin:"10px"}} onClick={() => updatePosts(post)}>Update</button>
+            <div class="row mt-5">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="card">
+                  <div class="card-block block-1">
+                    <h3 class="card-title">ID: {post.id}</h3>
+                    <p class="card-text">Title: {post.title}</p>
+                    <p title="Read more" class="read-more" >Body:{post.body}</p>
+                    <button style={{margin:"10px"}} onClick={() => updatePosts(post)}>Update</button>
           <button style={{margin:"10px"}} onClick={() => deletePosts(post.id)}>Delete</button>
-        </p>
+        
+                  </div>
+                </div>
+              </div>
+             </div>
       ))}
+      </div>   
+        </section> 
     </>
   );
 }

@@ -88,10 +88,10 @@ export default function Posts() {
   };
 
   return (
-    <>
+    <section id="what-we-do">
       <h1>List of Posts</h1>
     
-      <button style={{margin:"10px"}} onClick={() => getPosts()}>Get Posts</button>
+      <button class ="btn" style={{margin:"10px"}} onClick={() => getPosts()}>Get Posts</button>
 
       <br />
       <input style={{margin:"10px",padding:'8px'}}
@@ -114,32 +114,33 @@ export default function Posts() {
         value={formData.body}
       />
       <br />
-      <button style={{margin:"10px"}} onClick={createPosts}>
+      <button class ="btn" style={{margin:"10px"}} onClick={createPosts}>
         {formData.id ? "Update Post" : "Create New Post"}
       </button>
       <section id="what-we-do ">
           <div class="container-fluid">
             <h2 class="section-title mb-2 h1">Post-Content</h2>
             <p class="text-center text-muted h5">fetched details from api</p>
-
-      {posts.map(post => (
             <div class="row mt-5">
+      {posts.map(post => (
+            
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                   <div class="card-block block-1">
                     <h3 class="card-title">ID: {post.id}</h3>
                     <p class="card-text">Title: {post.title}</p>
                     <p title="Read more" class="read-more" >Body:{post.body}</p>
-                    <button style={{margin:"10px"}} onClick={() => updatePosts(post)}>Update</button>
-          <button style={{margin:"10px"}} onClick={() => deletePosts(post.id)}>Delete</button>
+                    <button class ="btn" style={{margin:"10px"}} onClick={() => updatePosts(post)}>Update</button>
+                    <button class ="btn" style={{margin:"10px"}} onClick={() => deletePosts(post.id)}>Delete</button>
         
                   </div>
                 </div>
               </div>
-             </div>
-      ))}
+               ))}
+           </div>
+     
       </div>   
         </section> 
-    </>
+    </section>
   );
 }

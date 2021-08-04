@@ -19,13 +19,12 @@ section .section-title{
 	-webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
 	transition: .5s all ease;
-  display: inline;
-  
+  display:inline;
 }
 #what-we-do .card:hover{
-	-webkit-box-shadow: 5px 7px 9px -4px rgb(92, 89, 89);
-	-moz-box-shadow: 5px 7px 9px -4px rgb(116, 111, 111);
-	box-shadow: 5px 7px 9px -4px rgb(83, 82, 82);
+	-webkit-box-shadow: 5px 7px 9px -4px rgb(128, 122, 122);
+	-moz-box-shadow: 5px 7px 9px -4px rgb(119, 117, 117);
+	box-shadow: 5px 7px 9px -4px rgb(126, 122, 122);
 }
 
 #what-we-do .card .card-block{
@@ -33,7 +32,7 @@ section .section-title{
     position: relative;
 }
 
-/* #what-we-do .card .card-block:before{
+ #what-we-do .card .card-block:before{
 	font-family: FontAwesome;
     position: absolute;
     font-size: 39px;
@@ -51,4 +50,11 @@ section .section-title{
 	-webkit-transition: .5s all ease;
 	-moz-transition: .5s all ease;
 	transition: .5s all ease;
-} */
+} 
+.btn{
+  background-color:rgb(182, 162, 162);
+  border:1px black solid ;
+}
+.btn:hover{
+  background-color:rgb(173, 115, 115);
+}

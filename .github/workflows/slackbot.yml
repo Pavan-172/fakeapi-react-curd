@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-    - name: Post to a Slack channel
-      id: slack
-      uses: slackapi/slack-github-action@v1.23.0
-      with:
-        channel-id: C04GHR8K99S
-        slack-message: "Hello Word"
-      env:
-        SLACK_BOT_TOKEN: xoxb-1084467806503-4561792758742-dPXgFfXKF5lN3c6z5HieOzSg
+      - name: Notify slack
+        env:
+           SLACK_BOT_TOKEN: xoxb-1084467806503-4561792758742-xTBlobyw9hW5PG5tff0yBKd4
+        uses: pullreminders/slack-action@master
+        with:
+           args: '{\"channel\":\"C04GSAVTU2Y\",\"text\":\"Hello world\"}'

@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Notify slack
         env:
-           SLACK_BOT_TOKEN: xoxb-1084467806503-4561792758742-xTBlobyw9hW5PG5tff0yBKd4
+           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         uses: pullreminders/slack-action@master
         with:
            args: '{\"channel\":\"C04GHR8K99S\",\"text\":\"Hello world\"}'

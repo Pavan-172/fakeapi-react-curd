@@ -17,4 +17,4 @@ jobs:
         channel-id: C04GHR8K99S
         slack-message: "Hello Word"
       env:
-        SLACK_BOT_TOKEN: xoxb-1084467806503-4561792758742-A9E80gw2QhHmCsjPGmIyOfJp
+        SLACK_BOT_TOKEN: xoxb-1084467806503-4561792758742-UAqji35BA4pxJCYqBCE3v47n

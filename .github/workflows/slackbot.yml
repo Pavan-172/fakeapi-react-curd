@@ -14,7 +14,7 @@ jobs:
       id: slack
       uses: slackapi/slack-github-action@v1.23.0
       with:
-        channel-id: C04GHR8K99S
+        channel-id: "C04GHR8K99S"
         slack-message: "Hello Word"
       env:
-        SLACK_BOT_TOKEN: xoxb-1084467806503-4561792758742-1OvUylD9vNZJI2yScqfnIbWA
+        SLACK_BOT_TOKEN: "xoxb-1084467806503-4561792758742-oWZBPPqDir7nsGEDuhYA8dt9"
